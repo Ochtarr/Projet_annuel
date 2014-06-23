@@ -1,0 +1,52 @@
+package vue;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class VuePrincipale extends JFrame {
+	
+	private Dimension screenSize;
+	private BorderLayout gestAlignement_JFrame;
+	private Container cont_JFrame;
+	private JPanel panneauHaut;
+	private Image image_bandeau;
+	private JPanel panneauBas;
+	
+	public VuePrincipale() throws IOException{
+		screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		setSize(screenSize.width/2,screenSize.height/2);
+		setResizable(true);
+		setLocationRelativeTo(null);
+		this.setTitle("EveryThing in your Hands");
+		
+		cont_JFrame = this.getContentPane();
+		gestAlignement_JFrame = new BorderLayout();
+		cont_JFrame.setLayout(gestAlignement_JFrame);
+		
+		panneauHaut = new JPanel();
+		panneauHaut.setLayout(new BorderLayout());
+		image_bandeau = ImageIO.read(new File("images/logo.png"));
+		panneauHaut.paint(image_bandeau.getGraphics());
+		//panneauHaut.add(image_bandeau, BorderLayout.CENTER);
+		cont_JFrame.add(panneauHaut);
+		
+		panneauBas = new JPanel();
+		cont_JFrame.add(panneauBas);
+		
+		//pack();
+		setVisible(true);
+	}
+	
+
+}

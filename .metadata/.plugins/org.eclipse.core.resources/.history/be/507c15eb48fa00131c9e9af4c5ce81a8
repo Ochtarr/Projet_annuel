@@ -1,0 +1,23 @@
+import java.io.IOException;
+
+import javax.swing.SwingUtilities;
+
+import vue_principale.VuePrincipale;
+
+public class EveryThingMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SwingUtilities.invokeLater(new Runnable(){
+			public void run(){
+				try {
+					new VuePrincipale();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+}

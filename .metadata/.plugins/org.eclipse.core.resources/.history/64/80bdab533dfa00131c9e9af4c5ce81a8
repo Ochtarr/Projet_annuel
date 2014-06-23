@@ -1,0 +1,11 @@
+package vue;
+
+import javax.swing.JFrame;
+
+public class VuePrincipale extends JFrame {
+	
+	public VuePrincipale(){
+		
+	}
+
+}

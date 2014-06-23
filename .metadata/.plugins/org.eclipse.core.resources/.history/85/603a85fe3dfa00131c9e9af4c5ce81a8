@@ -1,0 +1,26 @@
+package vue;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class VuePrincipale extends JFrame {
+	
+	private BorderLayout gestAlignement_JFrame;
+	private Container cont_JFrame;
+	private JPanel panneauHaut;
+	private JPanel panneauBas;
+	
+	public VuePrincipale(){
+		this.setTitle("EveryThing in your Hands");
+		
+		
+		
+		gestAlignement_JFrame = new BorderLayout();
+		panneauHaut = new JPanel();
+		panneauBas = new JPanel();
+	}
+
+}

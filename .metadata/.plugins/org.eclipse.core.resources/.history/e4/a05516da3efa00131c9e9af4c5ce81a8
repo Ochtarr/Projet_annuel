@@ -1,0 +1,36 @@
+package vue;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class VuePrincipale extends JFrame {
+	
+	private Dimension screenSize;
+	private BorderLayout gestAlignement_JFrame;
+	private Container cont_JFrame;
+	private JPanel panneauHaut;
+	private JPanel panneauBas;
+	
+	public VuePrincipale(){
+		screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		setSize(screenSize.width/2,screenSize.height/2);
+		setResizable(true);
+		setLocationRelativeTo(null);
+		this.setTitle("EveryThing in your Hands");
+		
+		cont_JFrame = this.getContentPane();
+		gestAlignement_JFrame = new BorderLayout();
+		
+		panneauHaut = new JPanel();
+		cont_JFrame.add(panneauHaut);
+		
+		panneauBas = new JPanel();
+		cont_JFrame.add(panneauBas);
+	}
+
+}

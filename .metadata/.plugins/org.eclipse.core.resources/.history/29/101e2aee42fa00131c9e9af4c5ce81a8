@@ -1,0 +1,10 @@
+package vue_principale;
+
+import javax.swing.JPanel;
+
+public class PanelHaut extends JPanel{
+	
+	public PanelHaut(){
+		
+	}
+}
